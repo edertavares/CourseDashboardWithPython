@@ -6,6 +6,8 @@ name = input("Qual o nome do filme?\n")
 yearLauche = int(input("Qual o ano de lançamento?\n"))
 noteMove = float(input("Qual a nota do filme?\n"))
 planIncluded = input("O plano está incluído? (True/False)\n")
+movieDescription = """Top Gun Maverick é um filme de guerra, aventura e Ação"""
+line = "="
 
 #limpando a tela
 os.system("cls" if os.name == "nt" else "clear")
@@ -16,6 +18,9 @@ print("O nome do filme é: " + name)
 print("O ano de lançamento é: " + str(yearLauche))
 print("A nota do filme é: " + str(noteMove))
 print("O plano está incluído: " + planIncluded)
+#multiplicação de string
+print(line * 50)
+print("A descrição do filme é: " + movieDescription)
 
 print()  #linha em branco
 print("Exibindo o tipo de dados: \n")
@@ -24,3 +29,4 @@ print((type(name)))
 print((type(yearLauche)))
 print((type(noteMove)))
 print((type(planIncluded)))
+print((type(movieDescription)))
