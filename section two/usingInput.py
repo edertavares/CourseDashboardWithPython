@@ -21,6 +21,10 @@ print("O plano está incluído: " + planIncluded)
 #multiplicação de string
 print(line * 50)
 print("A descrição do filme é: " + movieDescription)
+#procurar uma palavra dentro do texto
+
+print("Top" in name)  #verificando se a palavra "Top" está no nome do filme
+print("Gun" in movieDescription)  #verificando se a palavra "Gun" está na descrição do filme
 
 print()  #linha em branco
 print("Exibindo o tipo de dados: \n")
