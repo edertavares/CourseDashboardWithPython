@@ -22,12 +22,26 @@ print(unwatchedMovies)  # Imprimindo a lista com os filmes não assistidos
  """
 
 # 4 Encontrando um filme pleo nome
-searchMovie = (input("Digite o nome do filme que deseja encontrar: ")) #pedindo para o usuário digitar o nome do filme que deseja encontrar
+""" searchMovie = (input("Digite o nome do filme que deseja encontrar: ")) #pedindo para o usuário digitar o nome do filme que deseja encontrar
 foundMovies = [movie for movie in movieList if searchMovie.lower() in movie.lower()] #criando uma nova lista com os filmes que possuem o nome digitado pelo usuário, ignorando maiúsculas e minúsculas
 if foundMovies: #verificando se a lista não está vazia
     print("Filmes encontrados:")
     for movie in foundMovies:
         print(f"- {movie}")
 else:
-    print("Nenhum filme encontrado.")
-# Imprimindo a lista com os filmes encontrados  
+    print("Nenhum filme encontrado.") # Imprimindo a lista com os filmes encontrados   """
+
+# 5 Segunda opção para encontrar um filme pelo nome
+while True:
+    searchMovie = input("Digite o nome do filme que deseja encontrar (ou 'sair' para encerrar): ") #pedindo para o usuário digitar o nome do filme que deseja encontrar
+    if searchMovie.lower() == 'sair': #verificando se o usuário digitou 'sair' para encerrar o programa
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print("Encerrando o programa...")
+        break
+    foundMovies = [movie for movie in movieList if searchMovie.lower() in movie.lower()] #criando uma nova lista com os filmes que possuem o nome digitado pelo usuário, ignorando maiúsculas e minúsculas
+    if foundMovies: #verificando se a lista não está vazia
+        print("Filmes encontrados:")
+        for movie in foundMovies:
+            print(f"- {movie}")
+    else:
+        print("Nenhum filme encontrado.")
